@@ -1,0 +1,26 @@
+{
+    "name": "Udemy Created Date",
+    "version": "1.0.0",
+    "description": "Display Udemy course created date",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.udemy.com/course/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": ["https://*.udemy.com/api-2.0/courses/*"],
+    "icons": {
+        "16": "ulogo.png",
+        "48": "ulogo.png",
+        "128": "ulogo.png"
+    },
+    "browser_action": {
+        "default_title": "Udemy Created Date - QJ"
+    }
+}
